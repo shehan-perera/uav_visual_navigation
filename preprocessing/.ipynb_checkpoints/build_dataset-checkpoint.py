@@ -204,8 +204,8 @@ def build_dataset(path_to_data_folder: str, inference: bool=True):
     if inference:
         print('[info] -- creating tiles for inference')
         # image save path
-        os.mkdir(os.path.join(path_to_data_folder, 'tiled_data/inference_tiles'))
         save_dir = os.path.join(path_to_data_folder, 'tiled_data/inference_tiles')
+        os.mkdir(save_dir)
         
         # create the directories to store the image data in
         os.mkdir(os.path.join(save_dir, 'image_tiles'))
@@ -219,8 +219,8 @@ def build_dataset(path_to_data_folder: str, inference: bool=True):
     else:
         print('[info] -- creating tiles for training')
         # image save path
-        os.mkdir(os.path.join(path_to_data_folder, 'tiled_data/training_tiles'))
         save_dir = os.path.join(path_to_data_folder, 'tiled_data/training_tiles')
+        os.mkdir(save_dir)
         
         # create the directories to store the image data in
         os.mkdir(os.path.join(save_dir, 'image_tiles'))
